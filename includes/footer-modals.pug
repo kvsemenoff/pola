@@ -1,0 +1,31 @@
+.modal-window#callback
+	span.modal-close
+	form(action="#" class="form-callback")
+		span.any-form__title оставьте заявку
+		.form-top
+			input(type="text" name="uname" placeholder="Ваше имя")
+			input(type="text" name="phone" placeholder="+7 962 346-90-9")
+			input(type="text" name="email" placeholder="Ваша почта")
+		textarea(name="text" placeholder="Комментарий")
+		input(type="hidden" value="Форма - Заказать обратный звонок" name="forma")
+		input(type="submit" value="Отправить заявку" class="btn btn_bold")
+.modal-window.modal-window__gorod#get-gorod
+	span.window-title ВЫБЕРИТЕ ГОРОД
+	.your-gorod__box
+		span.your-gorod Ваш город
+		ul
+			li г. Калининград
+			li г. Ярославль
+.modal-window#order
+	span.modal-close
+	form(class="any-form form-callback" action="#")
+		input(type="text" placeholder="Имя" name="uname")
+		input(type="text" placeholder="Телефон" name="phone")
+		input(type="text" placeholder="Email" name="email")
+		input(type="submit" value="Отправить" class="btn btn_green")
+		input(type="hidden" value="Заказать звонок" name="forma")
+.modal-window#thanks
+	span.modal-close
+	span.any-form__title Спасибо за вашу заявку!
+	p.
+		В ближайшее время наш менеджер <br> свяжется с Вами.

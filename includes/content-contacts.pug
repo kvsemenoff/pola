@@ -1,0 +1,91 @@
+#contactsmap
+	.container
+		.row
+			.col-lg-12
+				h1 Контакты
++form(5)
+script.
+	$(document).ready(function(){
+
+	    ymaps.ready(init);
+
+	    function init() {
+	        var center = [54.725524, 20.496887];
+
+	        var center2 = [54.725524, 20.496887];
+	        var center3 = [57.578393, 39.847802];
+
+	        var myMap = new ymaps.Map('mape', {
+	            center: center,
+	            controls: [],
+	            zoom: 16,  
+	            controls: ['smallMapDefaultSet']
+	        }, {
+	            searchControlProvider: 'yandex#search'
+
+	        });
+	       
+
+
+	        var myMap2 = new ymaps.Map('contactsmap', {
+	            center: center,
+	            controls: [],
+	            zoom: 4,  
+	            controls: ['smallMapDefaultSet']
+	        }, {
+	            searchControlProvider: 'yandex#search'
+
+	        });
+
+	        myMap.behaviors.disable('scrollZoom');    
+	        myMap2.behaviors.disable('scrollZoom');
+
+
+
+	        var myPlacemark = new ymaps.Placemark(center, {
+	            // Свойства.
+	            // Содержимое иконки, балуна и хинта.
+	            balloonContent: 'улица Ивана Франко, 4к4',
+	            hintContent: 'улица Ивана Франко, 4к4'
+	        }, {
+	            // Опции.
+	            iconLayout: 'default#image',
+	            iconImageHref: 'img/map-ic.png',
+	            iconImageSize: [42, 42]
+	            // preset: 'twirl#violetIcon'
+	        });
+
+
+	        var myPlacemark2 = new ymaps.Placemark(center, {
+	            // Свойства.
+	            // Содержимое иконки, балуна и хинта.
+	            balloonContent: 'улица Ивана Франко, 4к4',
+	            hintContent: 'улица Ивана Франко, 4к4'
+	        }, {
+	            // Опции.
+	            iconLayout: 'default#image',
+	            iconImageHref: 'img/map-ic.png',
+	            iconImageSize: [42, 42]
+	            // preset: 'twirl#violetIcon'
+	        });
+
+	        // var myPlacemark3 = new ymaps.Placemark(center3, {
+	           
+	        //     balloonContent: 'улица Ивана Франко, 4к4',
+	        //     hintContent: 'улица Ивана Франко, 4к4'
+	        // }, {
+	           
+	        //     iconLayout: 'default#image',
+	        //     iconImageHref: 'img/map-ic.png',
+	        //     iconImageSize: [42, 42]
+	           
+	        // });
+
+
+	        myMap.geoObjects.add(myPlacemark);
+	        myMap2.geoObjects.add(myPlacemark2);
+	        // myMap2.geoObjects.add(myPlacemark3);
+	    }
+	});
+
+
