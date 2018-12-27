@@ -339,11 +339,11 @@ gulp.task('concatAllSCSS', function() {
 gulp.task('watch', function() {
 
     // Serve files from the root of this project
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+    // browserSync.init({
+    //     server: {
+    //         baseDir: "./"
+    //     }
+    // });
 
     //gulp.watch("*.html").on("change", reload);
     //gulp.watch("css/*.css").on("change", reload);
