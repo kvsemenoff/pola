@@ -23,6 +23,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-minify": "3.1.0",
+    "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
@@ -33,6 +34,7 @@
     "gulp-zip": "^4.0.0",
     "imagemin-pngquant": "^6.0.0",
     "node-sass": "^4.11.0",
-    "pug": "^2.0.0-rc.2"
-  }
+    "pug": "^2.0.3"
+  },
+  "dependencies": {}
 }
