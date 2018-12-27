@@ -349,8 +349,9 @@ gulp.task('watch', function() {
     //gulp.watch("css/*.css").on("change", reload);
     //gulp.watch("*.html").on("change", reload);
 
-     gulp.watch('sass/*.scss',  gulp.series('sass_dev')).on('change', function(file) {
+     gulp.watch('css/*.scss',  gulp.series('sass_dev')).on('change', function(file) {
         
+
     });
 
     
