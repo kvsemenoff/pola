@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/MyriadPro-Regular/MyriadPro-Regular.eot");
+  src: local("☺"), url("../fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular/MyriadPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MyriadPro-Light";
+  src: url("../fonts/MyriadPro-Light/MyriadPro-Light.eot");
+  src: local("☺"), url("../fonts/MyriadPro-Light/MyriadPro-Light.woff") format("woff"), url("../fonts/MyriadPro-Light/MyriadPro-Light.ttf") format("truetype"), url("../fonts/MyriadPro-Light/MyriadPro-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "MyriadPro-Semibold";
+  src: url("../fonts/MyriadPro-Semibold/MyriadPro-Semibold.eot");
+  src: local("☺"), url("../fonts/MyriadPro-Semibold/MyriadPro-Semibold.woff") format("woff"), url("../fonts/MyriadPro-Semibold/MyriadPro-Semibold.ttf") format("truetype"), url("../fonts/MyriadPro-Semibold/MyriadPro-Semibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h4, h5, h3, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  text-decoration: none; }
+
+body, html {
+  height: 100%; }
+
+body {
+  font-family: "MyriadPro-Regular";
+  color: #000;
+  font-size: 18px;
+  line-height: 22px;
+  background: red; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+.vertical-align {
+  vertical-align: middle; }
+
+.clear {
+  clear: both; }
+
+.center {
+  text-align: center; }
+
+a, input, textarea {
+  outline: none; }
+
+/* Mixins */
+/* Mixins End */
