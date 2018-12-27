@@ -344,9 +344,17 @@ gulp.task('watch', function() {
             baseDir: "./"
         }
     });
+
     gulp.watch("*.html").on("change", reload);
     gulp.watch("css/*.css").on("change", reload);
     gulp.watch("*.html").on("change", reload);
+    gulp.src('css/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+            cascade: true
+        })) // Создаем префиксы
+        .pipe(gulp.dest('css'))
+        
 });
 
 //gulp.task('default', gulpSequence('cleanfolder', 'concatAllSCSS', 'sass',  'concatOurSS', 'concatLibCSS', 'temp_to_css', 'del_temp', 'compressJSAll', 'compressJSLibs', 'compressJSOur', 'imagemin', 'imageMenu', 'includeFiles', 'fonts',  'htaccessFiles', 'rootFiles', 'styles_to_minify','scripts_to_minify', 'zip', 'ftp'));
