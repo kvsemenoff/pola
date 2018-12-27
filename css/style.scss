@@ -22,6 +22,8 @@ $greentext: #47c25e;
 	font-style: normal;
 }
 
+
+
 @font-face {
 	font-family: "MyriadPro-Semibold";
 	src: url('../fonts/MyriadPro-Semibold/MyriadPro-Semibold.eot');
@@ -31,8 +33,6 @@ $greentext: #47c25e;
 	font-weight: normal;
 	font-style: normal;
 }
-
-
 
 
 html, body, div, span, applet, object, iframe,
@@ -81,12 +81,11 @@ body, html{
 }
 
 body{
-
+	
 	font-family: "MyriadPro-Regular";
 	color: #000;
 	font-size: 18px;
 	line-height: 22px;
-	background: red;
 }
 .wrapper {
  	display: flex;
@@ -112,6 +111,10 @@ body{
 a, input, textarea{
 	outline: none;
 }
+
+
+
+
 
 
 
