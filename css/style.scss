@@ -185,28 +185,79 @@ textarea {
 }
 // container
 
+.container-main {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .container-content {
 	max-width: 1336px;
 	width: 100%;
 	padding: 0 5px;
 	margin: 0 auto;
 }
+
+.banner-container {
+	max-width: 1080px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.banner {
+	@media (min-width: 768px) {
+		padding-top: 160px;
+	}
+}
+// text
+
+.main-title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 59px;
+	font-size: 56px;
+	color: #000000;
+}
+
+.main-text {
+	font-family: 'Roboto', sans-serif;
+	line-height: 26px;
+	font-size: 18px;
+	letter-spacing: 0.2px;
+	color: #000000;
+}
 // header
+
+header {
+	@media (min-width: 992px) {
+		width: 100%;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.01) 64.64%);
+	}
+}
 
 .header-logo {
 	position: relative;
 }
+
+.header-inner {}
 
 .main-nav {
 	background: white;
 	padding: 10px;
 	position: absolute;
 	top: 0;
-	height: 100%;
+	height: 100vh;
 	left: -500px;
 	transition: 0.5s;
 	@media (min-width: 992px) {
 		position: unset;
+		background: none;
+		height: unset;
 
 		ul {
 			display: -webkit-flex;
@@ -296,7 +347,7 @@ textarea {
 	}
 }
 @media (min-width: 992px) {
-	header {
+	.header-inner {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
@@ -322,8 +373,579 @@ textarea {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		img {
 			max-width: unset;
 		}
+	}
+}
+// about us
+
+.banner_about {
+	background: url("../img/about-banner.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.banner-info {
+	max-width: 637px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	color: black;
+	padding: 20px 10px;
+	@media (min-width: 992px) {
+		padding: 56px 93px 70px;
+	}
+
+	h1 {
+		padding-bottom: 29px;
+	}
+
+	p:nth-child(2) {
+		padding-bottom: 30px;
+	}
+}
+
+.polaToday .polaToday-item:nth-child(1) {
+	text-align: center;
+	@media (min-width: 992px) {
+		margin-bottom: -5px;
+	}
+}
+
+.polaToday .polaToday-item:nth-child(2) {
+	background: #11A190;
+	background-size: cover;
+	@media (min-width: 992px) {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: baseline;
+		background: url("../img/about-bg-2-min.jpg") no-repeat top center;
+		background-size: cover;
+	}
+
+	.polaToday-info {
+		background: #11A190;
+		max-width: 631px;
+		width: 100%;
+		padding: 8px;
+		@media (min-width: 992px) {
+			margin-left: auto;
+		}
+		@media (min-width: 1280px) {
+			padding: 80px 55px;
+		}
+		color: white;
+
+		.main-title {
+			color: white;
+			padding-bottom: 30px;
+		}
+
+		p:nth-child(2) {
+			padding-bottom: 35px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.polaToday {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+
+		.polaToday-item {
+			width: 50%;
+		}
+	}
+}
+
+.operatedFleet {
+	background: rgba(54, 176, 165, 0.58);
+	padding: 30px 20px;
+
+	.operatedFleet-inner {
+		max-width: 954px;
+		width: 100%;
+		margin: 0 auto;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		@media (min-width: 768px) {
+			justify-content: space-between;
+		}
+
+		.operatedFleet-count:first-child {
+			margin-bottom: 50px;
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+
+		.operatedFleet-count {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			align-items: center;
+
+			.operatedFleet-count_item:first-child {
+				position: relative;
+				padding-right: 29px;
+				margin-right: 29px;
+
+				&:after {
+					content: "";
+					position: absolute;
+					width: 1px;
+					height: 104px;
+					background: white;
+					right: 0;
+					top: -42px;
+				}
+			}
+
+			&_item {
+				font-size: 90px;
+				letter-spacing: -0.04em;
+				color: #FFFFFF;
+				font-weight: 300;
+				@media (min-width: 768px) {
+					font-size: 125px;
+				}
+			}
+
+			&_item:nth-child(2) {
+				font-size: 18px;
+				color: #000000;
+				font-weight: 500;
+				line-height: 23px;
+			}
+		}
+	}
+}
+
+.ourBuisness {
+	background: url("../img/about-business.jpg") no-repeat top center;
+	background-size: cover;
+	padding-top: 102px;
+
+	.main-title {
+		color: white;
+		font-size: 56px;
+		margin-bottom: 120px;
+		text-align: center;
+		@media (min-width: 992px) {
+			text-align: left;
+		}
+	}
+
+	.banner-info {
+		max-width: 488px;
+		width: 100%;
+	}
+
+	&-container {
+		max-width: 1003px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.aboutServices {
+	@media (min-width: 1200px) {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+
+		&-item:nth-child(2) {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.aboutServices-item {
+	line-height: 26px;
+	font-size: 18px;
+	letter-spacing: 0.2px;
+	color: #009487;
+	text-align: center;
+
+	&:first-child {
+		margin-bottom: -7px;
+	}
+	@media (min-width: 1200px) {
+		text-align: left;
+		width: 50%;
+	}
+
+	&_inner {
+		max-width: 460px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.logisticalServices {
+	background: #009487;
+	padding: 62px 10px;
+
+	&-container {
+		max-width: 1160px;
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		color: white;
+		line-height: 38px;
+		font-size: 36px;
+		font-weight: 300;
+		color: #FFFFFF;
+		@media (min-width: 1200px) {
+			padding-left: 117px;
+
+			&:after {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				background: url("../img/about-k.png") no-repeat center;
+				width: 46px;
+				height: 43px;
+			}
+		}
+	}
+}
+
+.testemonials-box {
+	.main-text {
+		margin: 15px auto;
+		@media (min-width: 992px) {
+			margin: unset;
+		}
+	}
+
+	&_inner {
+		color: white;
+		padding: 20px;
+		position: relative;
+		padding: 90px 10px 34px;
+		text-align: center;
+		@media (min-width: 992px) {
+			text-align: left;
+			padding: 120px 78px 100px 71px;
+		}
+
+		p {
+			padding-top: 20px;
+		}
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 75px;
+			height: 64px;
+			@media (min-width: 992px) {
+				top: 66px;
+				left: 67px;
+				transform: unset;
+			}
+		}
+
+		&:nth-child(1):after {
+			background: url("../img/about-ico-1.png") no-repeat center;
+		}
+
+		&:nth-child(2):after {
+			background: url("../img/about-ico-2.png") no-repeat center;
+		}
+
+		&:nth-child(3):after {
+			background: url("../img/about-ico-3.png") no-repeat center;
+		}
+
+		&:nth-child(4):after {
+			background: url("../img/about-ico-4.png") no-repeat center;
+		}
+		@media (min-width: 768px) {
+			width: 50%;
+		}
+	}
+	@media (min-width: 768px) {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+
+		&:last-child {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&_inner:nth-child(1),
+	&_inner:nth-child(3) {
+		background: #33A99F;
+	}
+
+	&_inner:nth-child(2),
+	&_inner:nth-child(4) {
+		background: #4DB4AB;
+	}
+	@media (min-width: 768px) {
+		&_inner:nth-child(1),
+		&_inner:nth-child(4) {
+			background: #33A99F;
+		}
+
+		&_inner:nth-child(2),
+		&_inner:nth-child(3) {
+			background: #4DB4AB;
+		}
+	}
+}
+
+.testemonials {
+	.main-text {
+		max-width: 448px;
+		width: 100%;
+		font-size: 18px;
+		letter-spacing: 0.2px;
+		color: #009487;
+	}
+
+	&-box {
+		.main-text p:first-child {
+			padding-bottom: 24px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.testemonials {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+
+		&-box {
+			width: 50%;
+		}
+	}
+}
+
+.transported {
+	max-width: 1160px;
+	width: 100%;
+	margin: 90px auto 0;
+	@media (min-width: 1320px) {
+		max-width: 1318px;
+	}
+
+	.main-title {
+		padding-bottom: 50px;
+		@media (min-width: 992px) {
+			padding-bottom: 103px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.transported-top {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.transported-img__inner {
+	border: 1px solid white;
+	margin-bottom: -7px;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		float: left;
+	}
+
+	&:hover {
+		.transported-img_title {
+			display: flex;
+		}
+	}
+	@media (min-width: 768px) {
+		max-width: 184px;
+	}
+	@media (min-width: 992px) {
+		max-width: 247px;
+	}
+	@media (min-width: 1200px) {
+		max-width: 290px;
+	}
+	@media (min-width: 1320px) {
+		max-width: unset;
+	}
+}
+
+.transported-img {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	@media (min-width: 992px) {
+		justify-content: flex-end;
+	}
+}
+
+.transported-top_info {
+	max-width: 497px;
+	margin: 0 auto;
+	width: 100%;
+	line-height: 26px;
+	font-size: 18px;
+	letter-spacing: 0.2px;
+	color: #000000;
+
+	p {
+		padding-bottom: 34px;
+	}
+}
+
+.transported-img_title {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.65);
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.65);
+	font-weight: 300;
+	font-size: 26px;
+	display: none;
+	@media (min-width: 992px) {
+		font-size: 56px;
+	}
+}
+
+.tradeRoutes-info {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.tradeRoutes {
+	padding-top: 60px;
+
+	.main-title {
+		max-width: 1310px;
+		margin: 0 auto;
+	}
+}
+
+.tradeRoutes-info_item {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	padding: 100px 21px 55px;
+	max-width: 218px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+
+	&:hover {
+		border-right: 1px solid #E7E7E7;
+		border-left: 1px solid #E7E7E7;
+	}
+
+	h3 {
+		font-weight: 600;
+		color: #000000;
+		font-size: 16px;
+		padding: 8px 0;
+	}
+
+	h3 + p {
+		padding-bottom: 12px;
+	}
+
+	p {
+		font-size: 12px;
+		color: #9C9B9B;
+
+		span {
+			color: #000000;
+			font-weight: 600;
+		}
+	}
+}
+
+.tradeRoutes-info_img {
+	width: 61px;
+	height: 61px;
+	overflow: hidden;
+	position: absolute;
+	top: 40px;
+}
+
+.tradeRoutes-map {
+	background: #E3F9FE;
+	padding-top: 58px;
+	margin-top: 56px;
+}
+
+.breafInfo {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.breafInfo-item {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 15px;
+	@media (min-width: 1200px) {
+		max-width: 390px;
+	}
+	@media (min-width: 1440px) {
+		max-width: unset;
+	}
+	img {
+		float: left;
+	}
+}
+
+.breafInfo-item_inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 154, 215, 0.7);
+	font-weight: 300;
+	font-size: 36px;
+	color: #FFFFFF;
+	transition: 0.5s;
+
+	&:hover {
+		background: rgba(0, 148, 135, 0.9);
 	}
 }
