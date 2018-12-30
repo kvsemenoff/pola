@@ -1,23 +1,24 @@
-main
+main.container-main
 	.banner.banner_fleet
 		.banner-container
 			.fleet-about
 				.banner-info
-					h1 Our Fleet
-						p 
-							|Indentifying potential risks as early as possible in order to limit any losses is the first thing we consider when entering into any negotiations. The internal vetting procedures used
-							|are structured and detailed, and these give
-							|our commercial team the best opportunities
+					h1.main-title Our Fleet
+					p 
+						|Pola Maritime’s own fleet of Handy and Supramax sizes are all ice class, rightship, modern, and most are geared, with the rest of the ships chartered in ranging between Handy to Panamax sizes. Total of around 50 ships at any one time and increasing. 
 				.fleet-types
-					.fleet-types_inner
-						p Handysize
-						span 15,000 - 40,000 dwt
-					.fleet-types_inner
-						p Supramax
-						span 50,000 - 65,000 dwt
-					.fleet-types_inner
-						p Panamax
-						span 70,000 - 90,000 dwt
+					.fleet-types_item
+						.fleet-types_info.handysize
+							p Handysize
+							span 15,000 - 40,000 dwt
+					.fleet-types_item
+						.fleet-types_info.supramax
+							p Supramax
+							span 50,000 - 65,000 dwt
+					.fleet-types_item
+						.fleet-types_info.panamax
+							p Panamax
+							span 70,000 - 90,000 dwt
 
 	.iceClass
 		.iceClass-cont.container
@@ -28,10 +29,11 @@ main
 					|any time of the year.<br>
 
 			.iceClass-item
-				p 
-					|This variety in vessel sizes and class allows us to trade all year round, in most areas and in ports where restrictions and accessibility can be very difficult.  
-				p 
-					|We transport all types of dry bulk commodities, clean and dirty cargoes, from ores, coal, grains, steels, agricultural products, bauxite, alumina, fertilizers and much more.  
+				.iceClass-item_inner
+					p 
+						|This variety in vessel sizes and class allows us to trade all year round, in most areas and in ports where restrictions and accessibility can be very difficult.  
+					p 
+						|We transport all types of dry bulk commodities, clean and dirty cargoes, from ores, coal, grains, steels, agricultural products, bauxite, alumina, fertilizers and much more.  
 	.fleet-about
 		h2 Fleet
 		.fleet-about_inner
@@ -220,7 +222,7 @@ main
 				button.searchBtn(type="submit")
 
 		.table-wrap
-			table.shipTypeTable
+			//- table.shipTypeTable
 				tr
 					th Name
 					th Type
