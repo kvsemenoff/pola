@@ -225,7 +225,7 @@ main.container-main
 							li SHANDONG HUAHAI<br> SHIPYARD - RIZHAO, China
 
 	.operatedFleet.container
-		h2 Operated fleet list
+		h2.main-title Operated fleet list
 		.searchBox
 			.typeShip
 				button.typeShip-btn Type ship
@@ -241,10 +241,11 @@ main.container-main
 							a(href="#") Handysize
 						li
 							a(href="#") Transshipment
-		label.search
+		
 			form
-				input(type="search")
-				button.searchBtn(type="submit")
+				label.search-inp
+					input(type="search" placeholder="name of the ship")
+					button.searchBtn(type="submit")
 
 		.table-wrap
 			table.shipTypeTable

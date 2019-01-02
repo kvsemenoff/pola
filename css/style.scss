@@ -93,6 +93,7 @@ video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -1430,6 +1431,10 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	background: white;
+	h2{
+		margin-bottom: 55px;
+		margin-top: 20px;
+	}
 }
 
 .shipTypeTable {
@@ -1482,29 +1487,100 @@ header {
 	width: 1280px;
 }
 
+.searchBox{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.typeShip {
+	width: 259px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-right: 67px;
+}
+
 .typeShip-btn {
-	width: 266px;
 	background: #009487;
-	padding: 16px 0px 16px 40px;
+	width: 100%;
+	padding: 16px 0 16px 40px;
 	font-size: 24px;
 	text-align: left;
 	letter-spacing: 0.2px;
 	color: #5CBBB2;
 	border: 1px solid #009487;
-	border-radius: 2px;
+	border-radius: 2px 2px 0 0;
 	cursor: pointer;
 	transition: 0.5s;
 	position: relative;
-	&:hover{
+
+	&:hover {
 		opacity: 0.8;
 	}
-	&:after{
+
+	&:after {
 		content: "";
 		top: 24px;
 		position: absolute;
 		right: 30px;
 		width: 28px;
 		height: 15px;
-		background: url(../img/arrow.png) no-repeat center;
+		background: url("../img/arrow.png") no-repeat center;
 	}
+}
+
+.typeShip-list {
+	position: absolute;
+	width: 100%;
+	background: rgba(0, 148, 135, 0.9);
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 0 0 2px 2px;
+	padding: 0 0 0 16px;
+	display: none;
+
+	a {
+		line-height: 47px;
+		font-size: 24px;
+		letter-spacing: 0.2px;
+		font-weight: bold;
+		color: #FFFFFF;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.search-inp{
+	position: relative;
+}
+
+.search-inp input {
+	width: 259px;
+	height: 46px;
+	padding: 0 10px 0 28px;
+	background: #FFFFFF;
+	mix-blend-mode: normal;
+	border: 1px solid #009487;
+	box-sizing: border-box;
+	border-radius: 2px;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 0.2px;
+	color: #A9A9A9;
+}
+
+.searchBtn{
+	position: absolute;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	right: 20px;
+	top: 0;
+	width: 17px;
+	height: 16px;
+	background: url(../img/search.png) no-repeat center;
 }
