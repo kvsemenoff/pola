@@ -1523,8 +1523,8 @@ header {
 	}
 }
 
-.arrowRotate{
-	&:after{
+.arrowRotate {
+	&:after {
 		-moz-transform: rotate(180deg);
 		-ms-transform: rotate(180deg);
 		-webkit-transform: rotate(180deg);
@@ -1586,4 +1586,158 @@ header {
 	width: 17px;
 	height: 16px;
 	background: url("../img/search.png") no-repeat center;
+}
+// risk menejment
+
+.banner_risk {
+	background: url("../img/volumes.jpg") no-repeat center;
+	background-size: cover;
+	padding-bottom: 33px;
+	margin-bottom: 52px;
+
+	h1 {
+		margin: 25px 0;
+		font-size: 38px;
+		text-align: center;
+		@media (min-width: 768px) {
+			font-size: 56px;
+			text-align: left;
+			margin: 100px 0 82px;
+		}
+	}
+
+	.banner-info {
+		max-width: 584px;
+		width: 100%;
+	}
+}
+
+.date-box,
+.num-box {
+	font-weight: 300;
+	line-height: 38px;
+	font-size: 28px;
+	text-align: center;
+	color: #000000;
+	@media (min-width: 768px) {
+		font-size: 36px;
+	}
+}
+
+.num-box {
+	font-size: 36px;
+	text-align: center;
+	color: #009487;
+	@media (min-width: 768px) {
+		font-size: 64px;
+	}
+}
+
+.infographic-img {
+	text-align: center;
+}
+
+.infographics.infographics-2018 {
+	margin-bottom: 25px;
+	@media (min-width: 768px) {
+		margin-bottom: 50px;
+	}
+}
+
+.infographics.infographics-2017,
+.infographics.infographics-2018 {
+	padding: 0 15px;
+
+	.date-box {
+		margin-bottom: 35px;
+	}
+
+	.num-box {
+		margin-bottom: 25px;
+	}
+	@media (min-width: 768px) {
+		.date-box {
+			margin-bottom: 86px;
+		}
+
+		.num-box {
+			margin-bottom: 70px;
+		}
+	}
+	@media (min-width: 992px) {
+		padding: 0;
+	}
+}
+
+.infographics-group_title {
+	.date-box {
+		font-size: 30px;
+	}
+
+	.num-box {
+		font-size: 46px;
+	}
+}
+
+.infographics-group_title {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 30px;
+	@media (min-width: 500px) {
+		justify-content: space-between;
+	}
+	@media (min-width: 768px) {
+		margin-bottom: 90px;
+	}
+}
+
+.infographics-group_img {
+	text-align: center;
+}
+
+.infographics-group_item {
+	width: 100%;
+	padding: 25px 15px;
+	@media (min-width: 992px) {
+		padding: 60px 64px 0 98px;
+	}
+}
+
+.infographics-container {
+	padding-top: 60px;
+}
+
+.infographics-group {
+	margin-top: 73px;
+	@media (min-width: 992px) {
+		.infographics-group_item {
+			width: 50%;
+		}
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&_item:nth-child(1) {
+		background: rgba(179, 223, 219, 0.4);
+	}
+	&_item:nth-child(2) {
+		background: rgba(179, 223, 219, 0.5);
+	}
+	&_item:nth-child(3) {
+		background: rgba(179, 223, 219, 0.5);
+	}
+	&_item:nth-child(4) {
+		background: rgba(179, 223, 219, 0.7);
+	}
+	&_item:nth-child(5) {
+		background: rgba(179, 223, 219, 0.7);
+	}
+	&_item:nth-child(6) {
+		background: rgba(179, 223, 219, 0.9);
+	}
 }
