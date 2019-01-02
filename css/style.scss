@@ -1340,12 +1340,7 @@ header {
 	}
 }
 
-.name-anisia,
-.name-augusta,
-.name-devora,
-.name-elisaveta,
-.name-ilaria,
-.name-indian {
+.fleet-about_name {
 	height: 102px;
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -1354,24 +1349,20 @@ header {
 	align-items: center;
 }
 
-.fleet-about_bg__green,
-.name-augusta,
-.name-augusta + .fleet-about_info,
-.name-elisaveta,
-.name-elisaveta + .fleet-about_info,
-.name-indian,
-.name-indian + .fleet-about_info {
-	background-color: rgba(7, 142, 130, 0.9);
-}
+.fleet-about_inner {
+	.fleet-about_item:nth-child(odd) {
+		.fleet-about_info,
+		.fleet-about_name {
+			background-color: rgba(7, 142, 130, 0.9);
+		}
+	}
 
-.fleet-about_bg__purple,
-.name-anisia,
-.name-anisia + .fleet-about_info,
-.name-devora,
-.name-devora + .fleet-about_info,
-.name-ilaria,
-.name-ilaria + .fleet-about_info {
-	background-color: rgba(0, 105, 162, 0.9);
+	.fleet-about_item:nth-child(even) {
+		.fleet-about_info,
+		.fleet-about_name {
+			background-color: rgba(0, 105, 162, 0.9);
+		}
+	}
 }
 
 .fleet-about_item {
@@ -1431,7 +1422,8 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	background: white;
-	h2{
+
+	h2 {
 		margin-bottom: 55px;
 		margin-top: 20px;
 	}
@@ -1487,7 +1479,7 @@ header {
 	width: 1280px;
 }
 
-.searchBox{
+.searchBox {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
@@ -1515,10 +1507,6 @@ header {
 	transition: 0.5s;
 	position: relative;
 
-	&:hover {
-		opacity: 0.8;
-	}
-
 	&:after {
 		content: "";
 		top: 24px;
@@ -1527,6 +1515,21 @@ header {
 		width: 28px;
 		height: 15px;
 		background: url("../img/arrow.png") no-repeat center;
+		transition: 0.5s;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.arrowRotate{
+	&:after{
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
 	}
 }
 
@@ -1554,7 +1557,7 @@ header {
 	}
 }
 
-.search-inp{
+.search-inp {
 	position: relative;
 }
 
@@ -1573,7 +1576,7 @@ header {
 	color: #A9A9A9;
 }
 
-.searchBtn{
+.searchBtn {
 	position: absolute;
 	cursor: pointer;
 	outline: none;
@@ -1582,5 +1585,5 @@ header {
 	top: 0;
 	width: 17px;
 	height: 16px;
-	background: url(../img/search.png) no-repeat center;
+	background: url("../img/search.png") no-repeat center;
 }
