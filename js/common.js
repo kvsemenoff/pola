@@ -35,8 +35,104 @@ $(document).ready(function() {
     // type ship =========================================
     $('.typeShip-btn').click(function() {
         $('.typeShip-list').slideToggle();
-		$(this).toggleClass('arrowRotate');
+        $(this).toggleClass('arrowRotate');
     });
 
+    // num animation =====================================
+
+
+
+
+
+
+
+    var showAnimation_1 = true;
+    var showAnimation_2 = true;
+    var showAnimation_3 = true;
+    var showAnimation_4 = true;
+    var showAnimation_5 = true;
+
+    $(window).on("scroll load resize", function() {
+
+        if (showAnimation_1 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_1 = $('#count-1').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_1 = $("#count-1").outerHeight();
+            if (w_top + 1000 >= e_top_1 || w_height + w_top == d_height || e_height_1 + e_top_1 < w_height) {
+                $(".spincrement").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_1 = false;
+            }
+        }
+
+        if (showAnimation_2 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_2 = $('#count-2').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_2 = $("#count-2").outerHeight();
+            if (w_top + 700 >= e_top_2 || w_height + w_top == d_height || e_height_2 + e_top_2 < w_height) {
+                $(".spincrement2").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_2 = false;
+            }
+        }
+
+        if (showAnimation_3 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_3 = $('#count-3').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_3 = $("#count-3").outerHeight();
+            if (w_top + 800 >= e_top_3) {
+                $(".spincrement3").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_3 = false;
+            }
+        }
+
+        if (showAnimation_4 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_4 = $('#count-4').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_4 = $("#count-4").outerHeight();
+            if (w_top + 800 >= e_top_4 || w_height + w_top == d_height || e_height_4 + e_top_4 < w_height) {
+                $(".spincrement4").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_4 = false;
+            }
+        }
+
+        if (showAnimation_5 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_5 = $('#count-5').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_5 = $("#count-5").outerHeight();
+            if (w_top + 800 >= e_top_5 || w_height + w_top == d_height || e_height_5 + e_top_5 < w_height) {
+                $(".spincrement5").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_5 = false;
+            }
+        }
+    });
 
 });
