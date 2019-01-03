@@ -51,6 +51,9 @@ $(document).ready(function() {
     var showAnimation_3 = true;
     var showAnimation_4 = true;
     var showAnimation_5 = true;
+    var showAnimation_6 = true;
+    var showAnimation_7 = true;
+    var showAnimation_8 = true;
 
     $(window).on("scroll load resize", function() {
 
@@ -131,6 +134,54 @@ $(document).ready(function() {
                     complete: null
                 });
                 showAnimation_5 = false;
+            }
+        }
+
+        if (showAnimation_6 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_5 = $('#count-6').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_5 = $("#count-6").outerHeight();
+            if (w_top + 800 >= e_top_5 || w_height + w_top == d_height || e_height_5 + e_top_5 < w_height) {
+                $(".spincrement6").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_6 = false;
+            }
+        }
+
+        if (showAnimation_7 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_5 = $('#count-7').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_5 = $("#count-7").outerHeight();
+            if (w_top + 800 >= e_top_5 || w_height + w_top == d_height || e_height_5 + e_top_5 < w_height) {
+                $(".spincrement7").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_7 = false;
+            }
+        }
+
+        if (showAnimation_8 == true) {
+            var w_top = $(window).scrollTop();
+            var e_top_5 = $('#count-8').offset().top;
+            var w_height = $(window).height();
+            var d_height = $(document).height();
+            var e_height_5 = $("#count-8").outerHeight();
+            if (w_top + 800 >= e_top_5 || w_height + w_top == d_height || e_height_5 + e_top_5 < w_height) {
+                $(".spincrement8").spincrement({
+                    thousandSeparator: ", ",
+                    duration: 1000,
+                    complete: null
+                });
+                showAnimation_8 = false;
             }
         }
     });
