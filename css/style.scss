@@ -93,6 +93,7 @@ video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -1764,10 +1765,11 @@ header {
 
 .riskManagment {
 	&-item:nth-child(1) {
-		.riskManagment-info_text p:first-child{
+		.riskManagment-info_text p:first-child {
 			margin-bottom: 34px;
 		}
 	}
+
 	&-item:nth-child(2) {
 		.riskManagment-info_inner {
 			background: #009487;
@@ -1857,6 +1859,7 @@ header {
 				width: 100%;
 			}
 		}
+
 		&-item:nth-child(2) {
 			.riskManagment-info_text {
 				max-width: 316px;
@@ -1864,4 +1867,44 @@ header {
 			}
 		}
 	}
+}
+// clients
+
+.banner_clients {
+	background: url("../img/clients-banner.jpg") no-repeat center;
+	background-size: cover;
+
+	.main-title {
+		margin-bottom: 63px;
+	}
+
+	.banner-info {
+		max-width: 515px;
+		width: 100%;
+	}
+}
+
+.clients-logo {
+	&_item {
+		width: 100%;
+		@media (min-width: 600px) {
+			width: 50%;
+		}
+		@media (min-width: 768px) {
+			width: 30%;
+		}
+		@media (min-width: 1100px) {
+			width: 20%;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+	margin-top: 80px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
