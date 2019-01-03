@@ -93,7 +93,6 @@ video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -401,7 +400,7 @@ header {
 	color: black;
 	padding: 20px 10px;
 	@media (min-width: 992px) {
-		padding: 56px 93px 70px;
+		padding: 56px 93px 74px;
 	}
 
 	h1 {
@@ -1589,7 +1588,7 @@ header {
 }
 // risk menejment
 
-.banner_risk {
+.banner_volumes {
 	background: url("../img/volumes.jpg") no-repeat center;
 	background-size: cover;
 	padding-bottom: 33px;
@@ -1725,19 +1724,144 @@ header {
 	&_item:nth-child(1) {
 		background: rgba(179, 223, 219, 0.4);
 	}
+
 	&_item:nth-child(2) {
 		background: rgba(179, 223, 219, 0.5);
 	}
+
 	&_item:nth-child(3) {
 		background: rgba(179, 223, 219, 0.5);
 	}
+
 	&_item:nth-child(4) {
 		background: rgba(179, 223, 219, 0.7);
 	}
+
 	&_item:nth-child(5) {
 		background: rgba(179, 223, 219, 0.7);
 	}
+
 	&_item:nth-child(6) {
 		background: rgba(179, 223, 219, 0.9);
+	}
+}
+// risk managment
+
+.banner_risk {
+	background: url("../img/risk-banner.jpg") no-repeat center;
+	background-size: cover;
+
+	.banner-info {
+		max-width: 559px;
+		width: 100%;
+		margin-top: 37px;
+
+		h1 {
+			margin-bottom: 26px;
+		}
+	}
+}
+
+.riskManagment {
+	&-item:nth-child(1) {
+		.riskManagment-info_text p:first-child{
+			margin-bottom: 34px;
+		}
+	}
+	&-item:nth-child(2) {
+		.riskManagment-info_inner {
+			background: #009487;
+			color: white;
+		}
+	}
+}
+
+.riskManagment-img {
+	width: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.riskManagment-info_inner {
+	background: white;
+	padding: 15px;
+}
+@media (min-width: 768px) {
+	.riskManagment {
+		.riskManagment-item {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: space-between;
+
+			.riskManagment-info {
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				background: #009487 url("../img/wave.png") no-repeat;
+			}
+		}
+
+		.riskManagment-info_inner {
+			max-width: 626px;
+			width: 100%;
+		}
+
+		&-item:nth-child(1) {
+			.riskManagment-info_inner {
+				margin-left: auto;
+			}
+
+			.riskManagment-img {
+				width: 51.3%;
+			}
+
+			.riskManagment-info {
+				width: 48.7%;
+			}
+		}
+
+		&-item:nth-child(2) {
+			.riskManagment-img {
+				width: 48.7%;
+			}
+
+			.riskManagment-info {
+				width: 51.3%;
+				background: #009487 url("../img/wave.png") no-repeat right;
+			}
+
+			.riskManagment-info_inner {
+				max-width: 650px;
+				width: 100%;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.riskManagment {
+		.riskManagment-info_inner {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-item:nth-child(1) {
+			.riskManagment-info_text {
+				max-width: 385px;
+				width: 100%;
+			}
+		}
+		&-item:nth-child(2) {
+			.riskManagment-info_text {
+				max-width: 316px;
+				width: 100%;
+			}
+		}
 	}
 }

@@ -39,13 +39,6 @@ $(document).ready(function() {
     });
 
     // num animation =====================================
-
-
-
-
-
-
-
     var showAnimation_1 = true;
     var showAnimation_2 = true;
     var showAnimation_3 = true;
