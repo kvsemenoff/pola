@@ -187,10 +187,19 @@ textarea {
 }
 // container
 
+.container-header {
+	max-width: 1390px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .container-main {
 	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
+	@media (max-width: 768px) {
+		padding: 0 15px;
+	}
 }
 
 .container-content {
@@ -201,7 +210,7 @@ textarea {
 }
 
 .banner-container {
-	max-width: 1080px;
+	max-width: 1096px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -219,6 +228,9 @@ textarea {
 	line-height: 59px;
 	font-size: 56px;
 	color: #000000;
+	@media (max-width: 768px) {
+		font-size: 32px;
+	}
 }
 
 .main-text {
@@ -375,15 +387,32 @@ header {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.01) 64.64%);
+		background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.01) 70.64%);
+	}
+}
+
+.hideClass {
+	.header-info {
+		display: none;
+	}
+
+	.header-logo {
+		width: 85px;
+		height: unset;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	header {
+		background: linear-gradient(180deg, #fff 35%, rgba(255,255,255,0.01) 98%);
 	}
 }
 
 .header-logo {
 	position: relative;
 }
-
-.header-inner {}
 
 .main-nav {
 	background: white;
@@ -404,6 +433,23 @@ header {
 			display: flex;
 		}
 	}
+	@media (min-width: 1200px) {
+		li {
+			margin-right: 29px;
+		}
+
+		li:nth-child(3) {
+			margin-right: 20px;
+		}
+
+		li:nth-child(4) {
+			margin-right: 24px;
+		}
+
+		li:nth-child(5) {
+			margin-right: 24px;
+		}
+	}
 }
 
 .nav-show {
@@ -413,8 +459,8 @@ header {
 .menu-bars {
 	background: white;
 	padding: 5px;
-	width: 64px;
-	height: 64px;
+	width: 46px;
+	height: 46px;
 	box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
 	position: absolute;
 	right: 15px;
@@ -434,9 +480,9 @@ header {
 }
 
 .menu-bars_inner span {
-	width: 40px;
+	width: 34px;
 	height: 6px;
-	margin: 5px 0;
+	margin: 2px 0;
 	background: #495057;
 }
 
@@ -450,13 +496,28 @@ header {
 
 .header-info_item {
 	margin: 10px;
+	@media (min-width: 1200px) {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-right: 44px;
+		}
+	}
 }
 
 .header-info_item li {
 	font-family: 'Montserrat', sans-serif;
-	line-height: 20px;
+	line-height: 19px;
 	font-size: 12px;
 	color: #959595;
+
+	&:last-child {
+		font-size: 10px;
+	}
+
+	&:first-child {
+		font-size: 10px;
+	}
 	@media (min-width: 992px) {
 		text-align: right;
 	}
@@ -501,6 +562,8 @@ header {
 
 	.header-info {
 		margin-left: auto;
+		padding-top: 24px;
+		margin-right: 34px;
 	}
 
 	.header-cont {
@@ -508,8 +571,8 @@ header {
 	}
 
 	.header-logo {
-		width: 176px;
-		height: 162px;
+		width: 183px;
+		height: 145px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -519,21 +582,21 @@ header {
 		}
 	}
 }
-// about us
-
-.banner_about {
-	background: url("../img/about-banner.jpg") no-repeat top center;
-	background-size: cover;
+@media (min-width: 1200px) {
+	.header-logo {
+		margin-right: 49px;
+	}
 }
+// about us
 
 .banner-info {
 	max-width: 637px;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.8);
 	color: black;
-	padding: 20px 10px;
+	padding: 20px 0;
 	@media (min-width: 992px) {
-		padding: 56px 93px 74px;
+		padding: 46px 93px 86px;
 	}
 
 	h1 {
@@ -542,6 +605,21 @@ header {
 
 	p:nth-child(2) {
 		padding-bottom: 30px;
+	}
+}
+
+.banner_about {
+	background: url("../img/about-banner.jpg") no-repeat top center;
+	background-size: cover;
+	@media (min-width: 992px) {
+		.banner-info {
+			p:nth-child(2) {
+				padding-bottom: 1px;
+			}
+		}
+	}
+	@media (min-width: 1200px) {
+		padding-top: 192px;
 	}
 }
 
@@ -576,7 +654,7 @@ header {
 			margin-left: auto;
 		}
 		@media (min-width: 1280px) {
-			padding: 80px 55px;
+			padding: 49px 77px 79px;
 		}
 		color: white;
 
@@ -586,7 +664,7 @@ header {
 		}
 
 		p:nth-child(2) {
-			padding-bottom: 35px;
+			padding-bottom: 29px;
 		}
 	}
 }
@@ -604,10 +682,10 @@ header {
 
 .operatedFleet {
 	background: rgba(54, 176, 165, 0.58);
-	padding: 30px 20px;
+	padding: 69px 0 50px;
 
 	.operatedFleet-inner {
-		max-width: 954px;
+		max-width: 1100px;
 		width: 100%;
 		margin: 0 auto;
 		display: -webkit-flex;
@@ -617,6 +695,28 @@ header {
 		flex-wrap: wrap;
 		@media (min-width: 768px) {
 			justify-content: space-between;
+		}
+		@media (min-width: 1200px) {
+			.operatedFleet-count {
+				&:last-child {
+					margin-right: 126px;
+					width: 350px;
+				}
+
+				&:first-child {
+					.operatedFleet-count_item:first-child {
+						margin-right: 20px;
+					}
+
+					.operatedFleet-count_item:last-child {
+						padding-top: 16px;
+					}
+				}
+
+				&_item:last-child {
+					padding-left: 7px;
+				}
+			}
 		}
 
 		.operatedFleet-count:first-child {
@@ -662,30 +762,41 @@ header {
 				font-size: 18px;
 				color: #000000;
 				font-weight: 500;
-				line-height: 23px;
+				line-height: 21px;
+				letter-spacing: 0.1px;
+				padding-top: 5px;
 			}
 		}
 	}
 }
 
+.operatedFleet-list {
+	background: white;
+}
+
 .ourBuisness {
 	background: url("../img/about-business.jpg") no-repeat top center;
 	background-size: cover;
-	padding-top: 102px;
+	padding-top: 95px;
 
 	.main-title {
 		color: white;
 		font-size: 56px;
-		margin-bottom: 120px;
+		margin-bottom: 112px;
 		text-align: center;
 		@media (min-width: 992px) {
 			text-align: left;
+			padding-left: 44px;
 		}
 	}
 
 	.banner-info {
 		max-width: 488px;
 		width: 100%;
+		padding: 20px;
+		@media (min-width: 992px) {
+			padding: 60px 46px 95px;
+		}
 	}
 
 	&-container {
@@ -720,9 +831,7 @@ header {
 
 	&:first-child {
 		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			display: block;
 		}
 	}
 	@media (min-width: 1200px) {
@@ -731,18 +840,19 @@ header {
 	}
 
 	&_inner {
-		max-width: 460px;
+		max-width: 438px;
 		width: 100%;
+		padding-top: 16px;
 		margin: 0 auto;
 	}
 }
 
 .logisticalServices {
 	background: #009487;
-	padding: 62px 10px;
+	padding: 57px 10px 62px;
 
 	&-container {
-		max-width: 1160px;
+		max-width: 1170px;
 		position: relative;
 		width: 100%;
 		margin: 0 auto;
@@ -752,8 +862,6 @@ header {
 		font-weight: 300;
 		color: #FFFFFF;
 		@media (min-width: 1200px) {
-			padding-left: 117px;
-
 			&:after {
 				position: absolute;
 				content: "";
@@ -764,10 +872,14 @@ header {
 				height: 43px;
 			}
 		}
+		@media (min-width: 1380px) {
+			margin-left: 157px;
+			padding-left: 114px;
+		}
 	}
 }
 
-.testemonials-box {
+.features-box {
 	.main-text {
 		margin: 15px auto;
 		@media (min-width: 992px) {
@@ -783,11 +895,15 @@ header {
 		text-align: center;
 		@media (min-width: 992px) {
 			text-align: left;
-			padding: 120px 78px 100px 71px;
+			min-height: 277px;
+			padding: 120px 50px 0 62px;
+			// padding: 120px 88px 71px 62px;
 		}
 
 		p {
-			padding-top: 20px;
+			font-size: 19px;
+			padding-top: 3px;
+			line-height: 21px;
 		}
 
 		&:after {
@@ -799,29 +915,48 @@ header {
 			width: 75px;
 			height: 64px;
 			@media (min-width: 992px) {
-				top: 66px;
-				left: 67px;
+				top: 50px;
+				left: 63px;
 				transform: unset;
 			}
 		}
 
 		&:nth-child(1):after {
-			background: url("../img/about-ico-1.png") no-repeat center;
+			background: url("../img/about-ico-1.svg") no-repeat center;
 		}
 
 		&:nth-child(2):after {
-			background: url("../img/about-ico-2.png") no-repeat center;
+			background: url("../img/about-ico-2.svg") no-repeat center;
+			@media (min-width: 992px) {
+				left: 67px;
+				top: 45px;
+			}
 		}
 
 		&:nth-child(3):after {
-			background: url("../img/about-ico-3.png") no-repeat center;
+			background: url("../img/about-ico-3.svg") no-repeat center;
+			@media (min-width: 992px) {
+				left: 57px;
+				top: 45px;
+			}
 		}
 
 		&:nth-child(4):after {
-			background: url("../img/about-ico-4.png") no-repeat center;
+			background: url("../img/about-ico-4.svg") no-repeat center;
+			@media (min-width: 992px) {
+				left: 60px;
+				top: 40px;
+			}
 		}
 		@media (min-width: 768px) {
 			width: 50%;
+		}
+	}
+
+	&_inner:nth-child(2),
+	&_inner:nth-child(4) {
+		@media (min-width: 992px) {
+			padding-left: 71px;
 		}
 	}
 	@media (min-width: 768px) {
@@ -833,6 +968,8 @@ header {
 		&:last-child {
 			justify-content: center;
 			align-items: center;
+			padding-left: 55px;
+			padding-top: 28px;
 		}
 	}
 
@@ -858,7 +995,7 @@ header {
 	}
 }
 
-.testemonials {
+.features {
 	.main-text {
 		max-width: 448px;
 		width: 100%;
@@ -874,7 +1011,7 @@ header {
 	}
 }
 @media (min-width: 992px) {
-	.testemonials {
+	.features {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
@@ -888,9 +1025,10 @@ header {
 .transported {
 	max-width: 1160px;
 	width: 100%;
-	margin: 90px auto 0;
+	margin: 91px auto 0;
 	@media (min-width: 1320px) {
-		max-width: 1318px;
+		max-width: 1350px;
+		padding-right: 33px;
 	}
 
 	.main-title {
@@ -914,9 +1052,10 @@ header {
 	position: relative;
 
 	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		display: block;
+		// width: 100%;
+		// height: 100%;
+		// object-fit: cover;
 	}
 
 	&:hover {
@@ -957,6 +1096,8 @@ header {
 	font-size: 18px;
 	letter-spacing: 0.2px;
 	color: #000000;
+	padding-left: 16px;
+    padding-top: 4px;
 
 	p {
 		padding-bottom: 34px;
@@ -993,10 +1134,10 @@ header {
 }
 
 .tradeRoutes {
-	padding-top: 60px;
+	padding-top: 58px;
 
 	.main-title {
-		max-width: 1310px;
+		max-width: 1325px;
 		margin: 0 auto;
 	}
 }
@@ -1004,7 +1145,7 @@ header {
 .tradeRoutes-info_item {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
-	padding: 100px 21px 55px;
+	padding: 88px 21px 55px;
 	max-width: 218px;
 	width: 100%;
 	display: flex;
@@ -1032,7 +1173,7 @@ header {
 	p {
 		font-size: 12px;
 		color: #9C9B9B;
-
+		line-height: 15px;
 		span {
 			color: #000000;
 			font-weight: 600;
@@ -1045,12 +1186,12 @@ header {
 	height: 61px;
 	overflow: hidden;
 	position: absolute;
-	top: 40px;
+	top: 29px;
 }
 
 .tradeRoutes-map {
 	background: #E3F9FE;
-	padding-top: 58px;
+	padding-top: 45px;
 	margin-top: 56px;
 }
 
@@ -1067,10 +1208,9 @@ header {
 	overflow: hidden;
 
 	img {
-		height: 100%;
+		display: block;
 	}
 	@media (max-width: 990px) {
-		margin: 0 10px;
 		width: 100%;
 
 		img {
@@ -1137,6 +1277,7 @@ header {
 		display: -ms-flex;
 		display: flex;
 		margin-bottom: 0;
+		padding-top: 8px;
 	}
 }
 
@@ -1145,6 +1286,7 @@ header {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		padding-top: 11px;
 	}
 }
 
@@ -1176,7 +1318,7 @@ header {
 
 	p {
 		font-weight: 300;
-		padding: 12px 0;
+		padding: 7px 0;
 		line-height: 11px;
 		font-size: 10px;
 		// text-align: right;
@@ -1186,7 +1328,8 @@ header {
 
 .footer-info {
 	border-bottom: 1px solid #66A5C7;
-	margin-bottom: 8px;
+	padding-bottom: 11px;
+    margin-bottom: 5px;
 	@media (min-width: 768px) {
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1201,7 +1344,7 @@ header {
 
 	.footer-links {
 		ul:first-child {
-			margin-right: 46px;
+			margin-right: 56px;
 		}
 
 		ul:nth-child(2) {
@@ -1627,7 +1770,7 @@ header {
 .typeShip-btn {
 	background: #009487;
 	width: 100%;
-	padding: 16px 0 16px 40px;
+	padding: 16px 0 16px 20px;
 	font-size: 24px;
 	text-align: left;
 	letter-spacing: 0.2px;
@@ -1637,16 +1780,22 @@ header {
 	cursor: pointer;
 	transition: 0.5s;
 	position: relative;
+	@media(min-width: 768px) {
+		padding: 16px 0 16px 40px;
+	}
 
 	&:after {
 		content: "";
 		top: 24px;
 		position: absolute;
-		right: 30px;
+		right: 10px;
 		width: 28px;
 		height: 15px;
 		background: url("../img/arrow.png") no-repeat center;
 		transition: 0.5s;
+		@media(min-width: 768px) {
+			right: 30px;
+		}
 	}
 
 	&:hover {
@@ -1806,7 +1955,10 @@ header {
 	}
 
 	.num-box {
-		font-size: 46px;
+		font-size: 36px;
+		@media (min-width: 768px) {
+			font-size: 46px;
+		}
 	}
 }
 
@@ -2006,7 +2158,16 @@ header {
 	background-size: cover;
 
 	.main-title {
-		margin-bottom: 63px;
+		@media (min-width: 1100px) {
+			margin-bottom: 63px;
+		}
+
+		br {
+			display: none;
+			@media (min-width: 1100px) {
+				display: block;
+			}
+		}
 	}
 
 	.banner-info {
@@ -2328,38 +2489,55 @@ header {
 		}
 	}
 }
-.group-sircle{
+
+.group-sircle {
 	cursor: pointer;
-	.clicker{
+
+	.clicker {
 		opacity: 0;
 	}
 }
-.group-sircle:hover{
+
+.group-sircle:hover {
 	.circle-animate {
 		animation: circle-animate 1s alternate infinite;
 	}
+
 	.circle-animate2 {
 		animation: circle-animate2 1s alternate infinite;
 	}
+
 	.circle-animate3 {
 		animation: circle-animate3 1s alternate infinite;
 	}
+
 	.circle-animate4 {
 		animation: circle-animate4 1s alternate infinite;
 	}
+
 	.circle-animate5 {
 		animation: circle-animate5 1s alternate infinite;
 	}
+
 	.circle-animate5 {
 		animation: circle-animate5 1s alternate infinite;
 	}
+
 	.circle-animate6 {
 		animation: circle-animate6 1s alternate infinite;
 	}
+
 	.ellipse {
 		fill: #0069A2;
 	}
+
 	.line {
 		stroke: #0069A2;
 	}
+}
+
+.tradeRoutes-map_inner{
+	max-width: 1322px;
+	width: 100%;
+	margin: 0 auto;
 }

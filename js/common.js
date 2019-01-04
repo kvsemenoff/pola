@@ -50,6 +50,13 @@ $(document).ready(function() {
 
     $(window).on("scroll load resize", function() {
 
+        if($(this).scrollTop() >= 200) {
+            $('.header-inner').addClass('hideClass');
+        }
+        else{
+            $('.header-inner').removeClass('hideClass');
+        }
+
         if (showAnimation_1 == true) {
             var w_top = $(window).scrollTop();
             var e_top_1 = $('#count-1').offset().top;
@@ -213,7 +220,6 @@ $(document).ready(function() {
     $('#monaco').click(function() {
         modalShow('.monaco-modal');
     });
-
 
 
 });
