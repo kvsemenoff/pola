@@ -179,4 +179,41 @@ $(document).ready(function() {
         }
     });
 
+    // modal ========================================================
+    function modalShow(id) {
+        $('.overlay').fadeIn();
+        $(id).fadeIn();
+    };
+    $('.modal-close').click(function() {
+        $('.overlay').fadeOut();
+        $('.modal').fadeOut();
+    })
+    $(document).click(function(event) {
+        if ($(event.target).closest(".modal").length) return;
+        if ($(event.target).closest(".group-sircle").length) return;
+        $(".modal").fadeOut();
+        $(".overlay").fadeOut();
+        event.stopPropagation();
+    });
+    $('#denmark').click(function() {
+        modalShow('.denmark-modal');
+    });
+    $('#antwerp').click(function() {
+        modalShow('.antwerp-modal');
+    });
+    $('#cyprus').click(function() {
+        modalShow('.nicosia-modal');
+    });
+    $('#brazil').click(function() {
+        modalShow('.brazil-modal');
+    });
+    $('#singapore').click(function() {
+        modalShow('.singapore-modal');
+    });
+    $('#monaco').click(function() {
+        modalShow('.monaco-modal');
+    });
+
+
+
 });
