@@ -93,7 +93,6 @@ video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -229,7 +228,8 @@ textarea {
 	color: #000000;
 }
 // modal
-.overlay{
+
+.overlay {
 	width: 100%;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.7);
@@ -239,6 +239,7 @@ textarea {
 	z-index: 200;
 	display: none;
 }
+
 .modal {
 	display: none;
 	position: fixed;
@@ -323,7 +324,7 @@ textarea {
 		justify-content: space-between;
 	}
 
-	.modal-phone{
+	.modal-phone {
 		margin-top: auto;
 	}
 
@@ -363,9 +364,7 @@ textarea {
 		}
 	}
 }
-
 // header
-
 header {
 	@media (min-width: 992px) {
 		width: 100%;
@@ -2046,25 +2045,145 @@ header {
 	text-align: center;
 }
 
-.banner_main{
-	background: url(../img/main-banner.jpg) no-repeat center;
+.banner_main {
+	background: url("../img/main-banner.jpg") no-repeat center;
 	background-size: cover;
 	height: 100vh;
-	.main-title{
+
+	.main-title {
 		padding-top: 80px;
 		color: white;
 	}
 }
 
-
-
-.flex-cont{
+.flex-cont {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	footer{
+
+	footer {
 		margin-top: auto;
+	}
+}
+// map marker animation
+.marker-pulsing {
+	animation: pulsing 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(32px, -30px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.marker-pulsing2 {
+	animation: pulsing2 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing2 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(0px, 20px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.marker-pulsing3 {
+	animation: pulsing3 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing3 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(0px, 30px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.marker-pulsing4 {
+	animation: pulsing4 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing4 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(-5px, 30px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.marker-pulsing5 {
+	animation: pulsing5 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing5 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(-20px, 15px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.marker-pulsing6 {
+	animation: pulsing6 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes pulsing6 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(-65px, -11px) scale(1.2);
+
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
 	}
 }
