@@ -93,6 +93,7 @@ video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -365,6 +366,7 @@ textarea {
 	}
 }
 // header
+
 header {
 	@media (min-width: 992px) {
 		width: 100%;
@@ -1552,7 +1554,6 @@ header {
 	width: 100%;
 	// margin: 0 auto;
 	// background: white;
-
 	h2 {
 		margin-bottom: 55px;
 		margin-top: 20px;
@@ -2068,6 +2069,7 @@ header {
 	}
 }
 // map marker animation
+
 .marker-pulsing {
 	animation: pulsing 5s alternate infinite;
 	transform-origin: 50% 50%;
@@ -2080,7 +2082,6 @@ header {
 
 	50% {
 		transform: translate(32px, -30px) scale(1.2);
-
 	}
 
 	100% {
@@ -2100,7 +2101,6 @@ header {
 
 	50% {
 		transform: translate(0px, 20px) scale(1.2);
-
 	}
 
 	100% {
@@ -2120,7 +2120,6 @@ header {
 
 	50% {
 		transform: translate(0px, 30px) scale(1.2);
-
 	}
 
 	100% {
@@ -2140,7 +2139,6 @@ header {
 
 	50% {
 		transform: translate(-5px, 30px) scale(1.2);
-
 	}
 
 	100% {
@@ -2160,7 +2158,6 @@ header {
 
 	50% {
 		transform: translate(-20px, 15px) scale(1.2);
-
 	}
 
 	100% {
@@ -2180,10 +2177,189 @@ header {
 
 	50% {
 		transform: translate(-65px, -11px) scale(1.2);
-
 	}
 
 	100% {
 		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate {
+	animation: circle-animate 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(10px, 40px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate2 {
+	animation: circle-animate2 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate2 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(20px, 35px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate3 {
+	animation: circle-animate3 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate3 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(-10px, 20px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate4 {
+	animation: circle-animate4 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate4 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(40px, -33px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate5 {
+	animation: circle-animate5 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate5 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(-67px, -17px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate6 {
+	animation: circle-animate6 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate6 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(7px, 28px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.circle-animate7 {
+	animation: circle-animate7 5s alternate infinite;
+	transform-origin: 50% 50%;
+	// transform: translate(32px, -30px) scale(1.2);
+}
+@keyframes circle-animate7 {
+	0% {
+		transform: translate(0, 0) scale(1);
+	}
+
+	50% {
+		transform: translate(47px, -37px) scale(1.2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+.cityes-map {
+	svg {
+		.ellipse {
+			fill: #009487;
+		}
+
+		.line {
+			stroke: #009487;
+		}
+	}
+}
+.group-sircle{
+	cursor: pointer;
+	.clicker{
+		opacity: 0;
+	}
+}
+.group-sircle:hover{
+	.circle-animate {
+		animation: circle-animate 1s alternate infinite;
+	}
+	.circle-animate2 {
+		animation: circle-animate2 1s alternate infinite;
+	}
+	.circle-animate3 {
+		animation: circle-animate3 1s alternate infinite;
+	}
+	.circle-animate4 {
+		animation: circle-animate4 1s alternate infinite;
+	}
+	.circle-animate5 {
+		animation: circle-animate5 1s alternate infinite;
+	}
+	.circle-animate5 {
+		animation: circle-animate5 1s alternate infinite;
+	}
+	.circle-animate6 {
+		animation: circle-animate6 1s alternate infinite;
+	}
+	.ellipse {
+		fill: #0069A2;
+	}
+	.line {
+		stroke: #0069A2;
 	}
 }
