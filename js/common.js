@@ -1,5 +1,24 @@
 $(document).ready(function() {
 
+    
+
+    setInterval(function(){
+        $('.cyprus-time').html(moment().tz("Asia/Famagusta").format('a h:mm'));
+        $('.monaco-time').html(moment().tz("Europe/Monaco").format('a h:mm'));
+        $('.singapore-time').html(moment().tz("Asia/Singapore").format('a h:mm'));
+        $('.antwerp-time').html(moment().tz("Europe/Paris").format('a h:mm'));
+        $('.rio-time').html(moment().tz("America/Sao_Paulo").format('a h:mm'));
+        $('.copenhagen-time').html(moment().tz("Europe/Copenhagen").format('a h:mm'));
+    }, 1000); 
+
+    
+    
+
+    
+    
+
+    
+
     // Mobile menu ========================================
     $(function() {
         function burger() {
