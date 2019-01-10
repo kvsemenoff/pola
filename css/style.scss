@@ -1,4 +1,11 @@
 // out: ../css/style.css
+@font-face {
+	font-family: "roboto-thin";
+	src: url("../fonts/roboto-thin/roboto-thin.eot");
+	src: local('☺'), url("../fonts/roboto-thin/roboto-thin.woff") format('woff'), url("../fonts/roboto-thin/roboto-thin.ttf") format('truetype'), url("../fonts/roboto-thin/roboto-thin.svg") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 a,
 abbr,
@@ -398,7 +405,8 @@ header {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.01) 70.64%);
+		// background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.01) 70.64%);
+		background: linear-gradient(180deg, #fff 70%, rgba(255,255,255,0.01) 99%);
 	}
 }
 
@@ -407,17 +415,8 @@ header {
 		display: none;
 	}
 
-	.header-logo {
-		width: 85px;
-		height: unset;
-
-		img {
-			max-width: 100%;
-		}
-	}
-
 	header {
-		background: linear-gradient(180deg, #fff 35%, rgba(255,255,255,0.01) 98%);
+		background: linear-gradient(180deg, #fff 70%, rgba(255,255,255,0.01) 99%);
 	}
 }
 
@@ -622,13 +621,6 @@ header {
 .banner_about {
 	background: url("../img/about-banner.jpg") no-repeat top center;
 	background-size: cover;
-	@media (min-width: 992px) {
-		.banner-info {
-			p:nth-child(2) {
-				padding-bottom: 1px;
-			}
-		}
-	}
 	@media (min-width: 1200px) {
 		padding-top: 192px;
 	}
@@ -781,6 +773,12 @@ header {
 	}
 }
 
+.operatedFleet-count {
+	&_item:first-child {
+		font-family: 'roboto-thin';
+	}
+}
+
 .operatedFleet-list {
 	background: white;
 }
@@ -910,7 +908,6 @@ header {
 			text-align: left;
 			min-height: 277px;
 			padding: 120px 50px 0 62px;
-			// padding: 120px 88px 71px 62px;
 		}
 
 		p {
@@ -919,9 +916,8 @@ header {
 			line-height: 21px;
 		}
 
-		&:after {
+		.features-box_img {
 			position: absolute;
-			content: "";
 			top: 30px;
 			left: 50%;
 			transform: translateX(-50%);
@@ -934,28 +930,27 @@ header {
 			}
 		}
 
-		&:nth-child(1):after {
-			background: url("../img/about-ico-1.svg") no-repeat center;
+		&:nth-child(1) .features-box_img {
+			@media (min-width: 992px) {
+				top: 65px;
+			}
 		}
 
-		&:nth-child(2):after {
-			background: url("../img/about-ico-2.svg") no-repeat center;
+		&:nth-child(2) .features-box_img {
 			@media (min-width: 992px) {
 				left: 67px;
 				top: 45px;
 			}
 		}
 
-		&:nth-child(3):after {
-			background: url("../img/about-ico-3.svg") no-repeat center;
+		&:nth-child(3) .features-box_img {
 			@media (min-width: 992px) {
-				left: 57px;
+				left: 62px;
 				top: 45px;
 			}
 		}
 
-		&:nth-child(4):after {
-			background: url("../img/about-ico-4.svg") no-repeat center;
+		&:nth-child(4) .features-box_img {
 			@media (min-width: 992px) {
 				left: 60px;
 				top: 40px;
@@ -1022,6 +1017,11 @@ header {
 			padding-bottom: 24px;
 		}
 	}
+
+	&-box:nth-child(2) {
+		background: url("../img/grey-bg.jpg") no-repeat center;
+		background-size: cover;
+	}
 }
 @media (min-width: 992px) {
 	.features {
@@ -1066,9 +1066,13 @@ header {
 
 	img {
 		display: block;
-		// width: 100%;
-		// height: 100%;
-		// object-fit: cover;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.transported-img_title {
+		font-family: "roboto-thin";
 	}
 
 	&:hover {
@@ -1602,7 +1606,7 @@ header {
 				p:first-child {
 					padding-bottom: 70px;
 					@media (min-width: 1200px) {
-						padding-bottom: 11px;
+						padding-bottom: 90px;
 					}
 				}
 			}
@@ -1798,6 +1802,12 @@ header {
 		}
 	}
 
+	tr:first-child {
+		th {
+			font-weight: 500;
+		}
+	}
+
 	tr {
 		th:first-child {
 			background: #009487;
@@ -1897,7 +1907,7 @@ header {
 	border-style: solid;
 	border-color: white;
 	border-radius: 0 0 2px 2px;
-	padding: 0 0 0 16px;
+	padding: 0 0 0 41px;
 	display: none;
 
 	a {
@@ -1930,6 +1940,7 @@ header {
 	font-size: 16px;
 	letter-spacing: 0.2px;
 	color: #A9A9A9;
+	opacity: 0.5;
 }
 
 .searchBtn {
@@ -1951,7 +1962,7 @@ header {
 	padding-bottom: 33px;
 	margin-bottom: 52px;
 
-	h1 {
+	.main-title {
 		margin: 25px 0;
 		font-size: 38px;
 		text-align: center;
@@ -1960,11 +1971,17 @@ header {
 			text-align: left;
 			margin: 100px 0 82px;
 		}
+		@media (min-width: 1100px) {
+			margin: 100px 0 82px 90px;
+		}
 	}
 
 	.banner-info {
 		max-width: 584px;
 		width: 100%;
+		@media (min-width: 992px) {
+			padding: 60px 94px;
+		}
 	}
 }
 
@@ -2255,6 +2272,7 @@ header {
 .clients-logo {
 	&_item {
 		width: 100%;
+		border: 1px solid #F1F1F2;
 		@media (min-width: 600px) {
 			width: 50%;
 		}
@@ -2267,7 +2285,8 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 50px;
+		height: 265px;
+		// margin-bottom: 50px;
 	}
 	margin-top: 80px;
 	display: -webkit-flex;
@@ -2305,8 +2324,21 @@ header {
 		}
 		@media(min-width:1000px) {
 			padding-top: 37px;
+			font-size: 66px;
+			line-height: 70px;
+		}
+		@media(min-width:1200px) {
+			position: fixed;
+			top: 28%;
+			left: 26%;
 		}
 	}
+}
+
+.mainBanner-container {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .flex-cont {
