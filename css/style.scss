@@ -544,10 +544,10 @@ header {
 	display: inline-block;
 	padding: 11px 6px;
 	@media (min-width: 768px) {
-		padding: 11px 20px;
+		padding: 5px 20px;
 	}
 	@media (min-width: 1200px) {
-		padding: 11px 26px;
+		padding: 5px 26px;
 	}
 }
 @media (min-width: 768px) {
@@ -582,20 +582,22 @@ header {
 
 	.header-logo {
 		width: 183px;
-		height: 145px;
+		height: 125px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
-		img {
-			max-width: unset;
-		}
+		transition: 0.2s;
 	}
 }
 @media (min-width: 1200px) {
 	.header-logo {
 		margin-right: 49px;
 	}
+}
+.header-logo_scale{
+	height: 78px;
+	padding-bottom: 30px;
+    transform: scale(0.5);
 }
 // about us
 

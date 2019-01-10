@@ -62,9 +62,11 @@ $(document).ready(function() {
 
         if($(this).scrollTop() >= 200) {
             $('.header-inner').addClass('hideClass');
+            $('.header-logo').addClass('header-logo_scale');
         }
         else{
             $('.header-inner').removeClass('hideClass');
+            $('.header-logo').removeClass('header-logo_scale');
         }
 
         if (showAnimation_1 == true) {
