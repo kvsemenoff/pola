@@ -99,6 +99,7 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -131,7 +132,13 @@ q:before {
 	content: '';
 	content: none;
 }
-
+svg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
 a {
 	text-decoration: none;
 }
@@ -406,22 +413,34 @@ header {
 		left: 50%;
 		transform: translateX(-50%);
 		// background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.01) 70.64%);
-		background: linear-gradient(180deg, #fff 70%, rgba(255,255,255,0.01) 99%);
+		background: linear-gradient(180deg, #fff 10%, rgba(255,255,255,0.01) 90%);
+
 	}
 }
 
 .hideClass {
+	background: linear-gradient(180deg, #fff 70%, rgba(255,255,255,0.01) 99%);
+	padding: 20px 0px;
 	.header-info {
 		display: none;
 	}
-
-	header {
-		background: linear-gradient(180deg, #fff 70%, rgba(255,255,255,0.01) 99%);
+	.main-nav{
+		margin-top: -17px !important;
+	}
+	.header-logo{
+		margin-top: -38px;
 	}
 }
 
 .header-logo {
+	width: 90px;
+	height: 90px;
+
 	position: relative;
+	a{
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .main-nav {
@@ -432,6 +451,7 @@ header {
 	height: 100vh;
 	left: -500px;
 	transition: 0.5s;
+	z-index: 9999;
 	@media (min-width: 992px) {
 		position: unset;
 		background: none;
@@ -467,14 +487,15 @@ header {
 }
 
 .menu-bars {
-	background: white;
+	
 	padding: 5px;
 	width: 46px;
 	height: 46px;
-	box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
+	cursor: pointer;
+	
 	position: absolute;
 	right: 15px;
-	top: 32px;
+	top: 25px;
 	@media (min-width: 992px) {
 		display: none;
 	}
@@ -483,7 +504,7 @@ header {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: #e9ecef;
+		
 		height: 100%;
 		padding-top: 4px;
 	}
@@ -493,7 +514,7 @@ header {
 	width: 34px;
 	height: 6px;
 	margin: 2px 0;
-	background: #495057;
+	background: #009AD7;
 }
 
 .header-info {
@@ -543,6 +564,7 @@ header {
 	color: #009487;
 	display: inline-block;
 	padding: 11px 6px;
+
 	@media (min-width: 768px) {
 		padding: 5px 20px;
 	}
@@ -556,6 +578,15 @@ header {
 		border-radius: 2px;
 		color: white;
 	}
+}
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+}
+.header-cont_inner{
+	@media (max-width: 992px) {
+		display: none;
+	}	
 }
 @media (min-width: 992px) {
 	.header-inner {
@@ -581,12 +612,13 @@ header {
 	}
 
 	.header-logo {
-		width: 183px;
-		height: 125px;
+		width: 120px;
+		height: 120px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: 0.2s;
+		position: relative;
 	}
 }
 @media (min-width: 1200px) {
@@ -596,7 +628,8 @@ header {
 }
 .header-logo_scale{
 	height: 78px;
-	padding-bottom: 30px;
+	margin-top: -30px;
+	
     transform: scale(0.5);
 }
 // about us
@@ -1560,7 +1593,7 @@ header {
 
 	.iceClass-item:nth-child(1) {
 		padding-bottom: 190px;
-		background: white url("../img/ice-class.png") no-repeat left center;
+		background: url("../img/ice-class.png") no-repeat left center;
 		background-size: contain;
 		text-align: center;
 		@media (min-width: 992px) {
@@ -1571,6 +1604,7 @@ header {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+			margin-top: -38px;
 
 			p {
 				padding-left: 50px;
@@ -2299,16 +2333,22 @@ header {
 }
 
 .cityes-map {
-	margin-top: 200px;
-	margin-bottom: 75px;
+	
 	text-align: center;
-}
-
-.banner_main {
-	img {
-		display: block;
-		width: 100%;
+	@media(min-width:600px) {
+		margin-top: 200px;
+		margin-bottom: 75px;
 	}
+}
+.content-main{
+	background: url(../img/main-banner.jpg) no-repeat top center;
+}
+.banner_main {
+	
+	// img {
+	// 	display: block;
+	// 	width: 100%;
+	// }
 	position: relative;
 	padding-top: 0;
 
@@ -2604,6 +2644,11 @@ header {
 }
 
 .cityes-map {
+	position: relative;
+	height: 350px;
+	@media(min-width: 960px) {
+		height: 850px;
+	}
 	svg {
 		.ellipse {
 			fill: #009487;
@@ -2665,6 +2710,11 @@ header {
 	max-width: 1322px;
 	width: 100%;
 	margin: 0 auto;
+	position: relative;
+	height: 450px;
+	@media(min-width: 960px) {
+		height: 850px;
+	}
 }
 
 .banner-tech {

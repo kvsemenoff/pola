@@ -9,9 +9,17 @@ html(lang="ru-RU")
 		include includes/links.pug
 	body
 		.wrapper
-			.content
-				block header
+			if index == '1'
+				.content.content-main
+					block header
 
-				block content
-			.footer-wrap
-				block footer
+					block content
+				.footer-wrap
+					block footer
+			else
+				.content
+					block header
+
+					block content
+				.footer-wrap
+					block footer
