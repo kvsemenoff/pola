@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     $(window).on("scroll load resize", function() {
 
-        if($(this).scrollTop() >= 200) {
+        if($(this).scrollTop() >= 80) {
             $('header').addClass('hideClass');
             $('.header-logo').addClass('header-logo_scale');
         }
