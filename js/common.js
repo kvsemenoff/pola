@@ -1,4 +1,5 @@
 $(document).ready(function() {
+ 
 
     // Set interval ======================================
     setInterval(function(){
@@ -201,17 +202,20 @@ $(document).ready(function() {
     // modal ========================================================
     function modalShow(id) {
         $('.overlay').fadeIn();
+        $('body').toggleClass('no-scroll');
         $(id).fadeIn();
     };
     $('.modal-close').click(function() {
         $('.overlay').fadeOut();
         $('.modal').fadeOut();
+        $('body').removeClass('no-scroll');
     })
     $(document).click(function(event) {
         if ($(event.target).closest(".modal").length) return;
         if ($(event.target).closest(".group-sircle").length) return;
         $(".modal").fadeOut();
         $(".overlay").fadeOut();
+         $('body').removeClass('no-scroll');
         event.stopPropagation();
     });
     $('#denmark').click(function() {
